@@ -314,7 +314,7 @@ export default function Home() {
                   variants={fadeScale}
                   transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                   whileHover={{ y: -8, scale: 1.02 }}
-                  style={{ width: `${CARD_WIDTH}px`, flexShrink: 0, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "28px", padding: "28px", backdropFilter: "blur(10px)", display: "flex", flexDirection: "column" }}
+                  style={{ width: `min(${CARD_WIDTH}px, 85vw)`, flexShrink: 0, background: "rgba(255,255,255,0.02)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: "28px", padding: "28px", backdropFilter: "blur(10px)", display: "flex", flexDirection: "column" }}
                   onClick={() => { setPortfolioOpen(true); setCurrentSlide(idx); }}
                 >
                   <div style={{ height: "200px", background: "rgba(255,255,255,0.05)", borderRadius: "18px", display: "flex", alignItems: "center", justifyContent: "center", color: "#334155", fontWeight: "bold", fontSize: "1.1rem" }}>{p.image}</div>
@@ -384,12 +384,10 @@ export default function Home() {
               variants={fadeUp}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
               whileHover={{ scale: 1.01 }}
-              style={{ width: "100%", maxWidth: "1200px", display: "grid", gridTemplateColumns: "400px 1fr", gap: "80px", alignItems: "center" }}
-            >
+style={{ width: "100%", maxWidth: "1200px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "clamp(32px, 5vw, 80px)", alignItems: "center" }}            >
               <motion.div 
                 whileHover={{ scale: 1.03, rotate: 1 }} 
-                style={{ height: "500px", background: m.gradient, borderRadius: "40px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "8rem", fontWeight: 900, color: "rgba(255,255,255,0.4)", boxShadow: "0 20px 50px rgba(0,0,0,0.5)" }}
-              >
+style={{ height: "clamp(220px, 40vw, 500px)", background: m.gradient, borderRadius: "40px", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "clamp(4rem, 10vw, 8rem)", fontWeight: 900, color: "rgba(255,255,255,0.4)", boxShadow: "0 20px 50px rgba(0,0,0,0.5)" }}              >
                 {m.avatar}
               </motion.div>
               <div>
@@ -405,7 +403,7 @@ export default function Home() {
                 <h2 style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)", fontWeight: 900, margin: "16px 0", lineHeight: 1.1 }}>{m.name}</h2>
                 <p style={{ fontSize: "1.3rem", color: "#94a3b8", marginBottom: "32px" }}>{m.role}</p>
                 <p style={{ color: "#cbd5e1", fontSize: "1.1rem", lineHeight: 1.8, marginBottom: "32px", maxWidth: "600px" }}>{m.bio}</p>
-                <div style={{ display: "flex", gap: "12px" }}>
+                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap" }}>
                   {m.skills.map(s => (
                     <motion.span 
                       key={s} 
@@ -434,7 +432,7 @@ export default function Home() {
               maxWidth: "1100px", 
               background: "linear-gradient(135deg, rgba(37,99,235,0.12) 0%, rgba(109,40,217,0.08) 100%)", 
               borderRadius: "40px", 
-              padding: "80px 40px", 
+              padding: "clamp(32px, 6vw, 80px) clamp(20px, 4vw, 40px)",
               textAlign: "center", 
               border: "1px solid rgba(255,255,255,0.1)", 
               backdropFilter: "blur(30px)" 
@@ -461,7 +459,7 @@ export default function Home() {
             </p>
 
             {/* Stats Grid */}
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "40px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "clamp(20px, 4vw, 40px)" }}>
               {bannerStats.map((b, i) => (
                 <div key={i}>
                   <div style={{ color: b.color, marginBottom: "20px", display: "flex", justifyContent: "center" }}>{b.icon}</div>
@@ -517,7 +515,7 @@ export default function Home() {
                 ))}
               </div>
 
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "10px" }}>
                 {services[activeModal].details.map((d, idx) => (
                   <motion.div 
                     key={d} 

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
+ 
   /* ── Active State Helper ── */
   const isActive = (href) => {
     const basePath = href.split("#")[0] || "/";
@@ -116,16 +117,24 @@ export default function Navbar() {
           }}
         >
           {/* ── Logo ── */}
-          <Link href="/" style={{ textDecoration: "none" }}>
-            <span style={{
-              fontSize: "1.2rem",
-              fontWeight: 900,
-              letterSpacing: "-0.03em",
-              color: "#ffffff",
-            }}>
-              AltairEx<span style={{ color: "#60a5fa" }}>.</span>
-            </span>
-          </Link>
+<Link href="/" style={{ textDecoration: "none", display: "flex", alignItems: "center", gap: "10px" }}>
+  {/* Logo Image add ki hai */}
+  <Image 
+    src="/logo.png" 
+    alt="AltairEx Logo" 
+    width={32} 
+    height={32} 
+    style={{ objectFit: "contain" }}
+  />
+  <span style={{
+    fontSize: "1.2rem",
+    fontWeight: 900,
+    letterSpacing: "-0.03em",
+    color: "#ffffff",
+  }}>
+    AltairEx<span style={{ color: "#60a5fa" }}>.</span>
+  </span>
+</Link>
 
           {/* ── Desktop Nav Links ── */}
           <nav className="desktop-nav">

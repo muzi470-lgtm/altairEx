@@ -117,7 +117,7 @@ export const metadata = {
     images: ['/og-image.png'],
   },
 
- vverification: {
+ verification: {
   google: '0qAyyhYWq2eFv595eAkcipyqYYl29Kbcu-RChHlPwyM',
 },
   category: 'technology',
@@ -249,6 +249,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={plusJakarta.className}>
       <head>
+          {/* Google Search Console Verification */}
+  <meta name="google-site-verification" content="0qAyyhYWq2eFv595eAkcipyqYYl29Kbcu-RChHlPwyM" />
         {/* Geo Targeting Tags */}
         <meta name="geo.region" content="PK-PB" />
         <meta name="geo.placename" content="Lahore, Pakistan" />

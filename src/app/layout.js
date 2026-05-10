@@ -117,10 +117,9 @@ export const metadata = {
     images: ['/og-image.png'],
   },
 
- verification: {
-  google: 'a2ffdc4d7afffec5',
+ vverification: {
+  google: '0qAyyhYWq2eFv595eAkcipyqYYl29Kbcu-RChHlPwyM',
 },
-
   category: 'technology',
 };
 

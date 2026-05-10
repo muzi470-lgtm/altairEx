@@ -117,9 +117,9 @@ export const metadata = {
     images: ['/og-image.png'],
   },
 
-  verification: {
-    google: 'add-your-google-search-console-code-here',
-  },
+ verification: {
+  google: 'a2ffdc4d7afffec5',
+},
 
   category: 'technology',
 };

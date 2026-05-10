@@ -55,3 +55,6 @@ body {
   z-index: 0;
   pointer-events: none;
 }
+html {
+  scroll-behavior: smooth;
+}

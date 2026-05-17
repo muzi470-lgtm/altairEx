@@ -2,13 +2,6 @@
 import Link from "next/link";
 
 /* ── Inline SVG Icons ── */
-const InstagramIcon = ({ size = 16 }) => (
-  <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-  </svg>
-);
 
 const LinkedInIcon = ({ size = 16 }) => (
   <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -67,7 +60,7 @@ export default function Footer() {
   // ── PROJECTS LINK ADDED IN MAIN PAGES ──
   const mainPages = [
     { label: "Intro", href: "/" },
-    { label: "Projects", href: "/projects" }, 
+    //{ label: "Projects", href: "/projects" }, 
     { label: "Team", href: "/#team" },
     { label: "Why Elite", href: "/#why-us" },
   ];
@@ -88,8 +81,7 @@ export default function Footer() {
   ];
 
   const socials = [
-    { label: "Instagram", href: "https://instagram.com", icon: <InstagramIcon /> },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: <LinkedInIcon /> },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/muzammil-naeem-52604640a/", icon: <LinkedInIcon /> },
     { label: "GitHub", href: "https://github.com", icon: <GitHubIcon /> },
   ];
 

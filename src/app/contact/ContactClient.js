@@ -46,8 +46,7 @@ export default function ContactClient() {
   };
 
   const socials = [
-    { label: "Instagram", href: "https://instagram.com", icon: <CameraIcon /> },
-    { label: "LinkedIn", href: "https://linkedin.com", icon: <BriefcaseIcon /> },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/muzammil-naeem-52604640a/", icon: <BriefcaseIcon /> },
     { label: "GitHub", href: "https://github.com", icon: <GitHubIcon /> },
   ];
 

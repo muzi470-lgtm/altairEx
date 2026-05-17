@@ -95,6 +95,7 @@ export default function Navbar() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.45 }}
           style={{
+            position: "relative",
             maxWidth: "1100px",
             margin: "0 auto",
             display: "flex",
@@ -137,8 +138,7 @@ export default function Navbar() {
 </Link>
 
           {/* ── Desktop Nav Links ── */}
-          <nav className="desktop-nav">
-            <ul style={{
+<nav className="desktop-nav" style={{ position: "absolute", left: "50%", transform: "translateX(-50%)" }}>            <ul style={{
               display: "flex",
               alignItems: "center",
               gap: "4px",
@@ -266,7 +266,7 @@ export default function Navbar() {
           </nav>
 
           {/* ── CTA Button (Desktop) ── */}
-<Link href="/projects" style={{ textDecoration: "none" }} className="desktop-nav">            <span
+{/*<Link href="/projects" style={{ textDecoration: "none" }} className="desktop-nav">            <span
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -295,6 +295,7 @@ export default function Navbar() {
             Our Projects <span>→</span>
             </span>
           </Link>
+          */}
 
           {/* ── Hamburger (Mobile) ── */}
           <button
@@ -426,7 +427,7 @@ export default function Navbar() {
             ))}
 
           {/* Mobile Menu ka end button */}
-<Link href="/projects" style={{ textDecoration: "none", marginTop: "8px" }} onClick={() => setMenuOpen(false)}>
+{/*<Link href="/projects" style={{ textDecoration: "none", marginTop: "8px" }} onClick={() => setMenuOpen(false)}>
   <span style={{
     display: "block",
     textAlign: "center",
@@ -440,6 +441,7 @@ export default function Navbar() {
     View Projects →
   </span>
 </Link>
+*/}
           </motion.div>
         )}
       </AnimatePresence>

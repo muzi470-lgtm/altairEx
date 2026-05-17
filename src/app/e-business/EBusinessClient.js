@@ -7,7 +7,7 @@ import {
   Search, Mail, X, ArrowRight, Sparkles 
 } from "lucide-react";
 
-export default function EbusinessClient() {
+export default function EBusinessClient() {
   // ── Modal State ──
   const [activeModal, setActiveModal] = useState(null);
 

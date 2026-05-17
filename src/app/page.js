@@ -105,7 +105,7 @@ export default function Home() {
 
   const team = [
     { name: "Muzammil Naeem", role: "CEO & Visionary", dept: "Leadership", bio: "Founded in 2021 with a singular mission to accelerate your business growth, we have evolved into a powerhouse of 50+ elite developers dedicated to delivering excellence around the clock.", skills: ["Strategy", "Growth"], gradient: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)", avatar: "M" },
-    { name: "Mudassir Naeem", role: "Engineering Lead", dept: "Tech Dept", bio: "Co-founded the agency in 2021 with a vision for technical excellence. I lead our global engineering powerhouse of 50+ developers, ensuring every line of code is optimized for your business growth.", skills: ["Cloud", "Security","System Architecture","Full-Stack Development"], gradient: "linear-gradient(135deg, #064e3b 0%, #10b981 100%)", avatar: "M" },
+    { name: "Tech Head", role: "Engineering Lead", dept: "Tech Dept", bio: "Co-founded the agency in 2021 with a vision for technical excellence. I lead our global engineering powerhouse of 50+ developers, ensuring every line of code is optimized for your business growth.", skills: ["Cloud", "Security","System Architecture","Full-Stack Development"], gradient: "linear-gradient(135deg, #064e3b 0%, #10b981 100%)", avatar: "M" },
     { name: "Growth Head", role: "Marketing Director", dept: "Business Dept", bio: "Joined the leadership team to revolutionize brand scaling. As a marketing expert, I specialize in turning business objectives into high-converting digital funnels that guarantee measurable growth and unmatched ROI.", skills: ["SEO", "Analytics","Digital Marketing","Conversion Optimization (CRO)","Growth Strategy"], gradient: "linear-gradient(135deg, #701a75 0%, #d946ef 100%)", avatar: "G" }
   ];
 
@@ -267,7 +267,7 @@ export default function Home() {
         </div>
 
         {/* ── 3. PORTFOLIO SWIPE SECTION ── */}
-        <section id="portfolio" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "80px 0" }}>
+        {/*<section id="portfolio" style={{ minHeight: "100vh", display: "flex", flexDirection: "column", justifyContent: "center", padding: "80px 0" }}>
           <div style={{ maxWidth: "1100px", margin: "0 auto 40px", width: "100%", padding: "0 24px", display: "flex", justifyContent: "space-between", alignItems: "flex-end" }}>
             <motion.div initial="hidden" whileInView="visible" viewport={{ amount: 0.5 }} variants={fadeLeft} transition={{ duration: 0.7 }}>
               <span style={{ color: "#60a5fa", fontWeight: "bold", textTransform: "uppercase", letterSpacing: "0.2em", fontSize: "0.8rem" }}>Case Studies</span>
@@ -349,10 +349,10 @@ export default function Home() {
                 </motion.div>
               ))}
             </motion.div>
-          </div>
+          </div> */}
 
           {/* Pagination Dots */}
-          <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "36px" }}>
+         {/*} <div style={{ display: "flex", justifyContent: "center", gap: "10px", marginTop: "36px" }}>
             {portfolios.map((_, idx) => (
               <motion.button
                 key={idx}
@@ -371,7 +371,7 @@ export default function Home() {
               />
             ))}
           </div>
-        </section>
+        </section>*/}
 
         {/* ── 4. TEAM SECTION (Full Page per Member) ── */}
         <div id="team">

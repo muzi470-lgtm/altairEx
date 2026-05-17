@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 
-export default function ProjectsPage() {
+export default function ProjectsClients() {
   // ── 1. PROJECT DATA ──
   const PROJECTS = [
     {
